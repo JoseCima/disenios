@@ -9,47 +9,63 @@ class BasicoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: <Widget>[
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
             _crearImagen(),
             _crearTitulo(),
             _crearAcciones(),
             _crearTexto(),
+            _crearTexto(),
+
+            _crearTexto(),
+
+            _crearTexto(),
+
+            _crearTexto(),
+
         ],
+        ),
       )
     );
   }
 
   Widget _crearImagen (){
-    return Image(
-              image: NetworkImage('https://live.staticflickr.com/65535/49168363698_337ea6289c_c.jpg'),
-              
-            );
+    return Container(
+      width: double.infinity,
+      child: Image(
+                image: NetworkImage('https://live.staticflickr.com/65535/49168363698_337ea6289c_c.jpg'),
+                height: 220.0,
+                fit: BoxFit.cover,
+              ),
+    );
   }
 
   Widget _crearTitulo(){
-    return Container(
-              padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                          Text('Roses are Rosies', style: estiloTitulo),
-                          SizedBox(height: 7.0),
-                          Text('Trabajo de Jose Guillermo Cima Tamay', style: estiloSubtitulo)
-                      ],
+    return SafeArea(
+      child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                            Text('Roses are Rosies', style: estiloTitulo),
+                            SizedBox(height: 7.0),
+                            Text('Trabajo de Jose Guillermo Cima Tamay', style: estiloSubtitulo)
+                        ],
+                      ),
                     ),
-                  ),
-
-                  Icon(Icons.star, color: Colors.pink, size: 30.0), 
-                  Text('41', style: TextStyle(fontSize: 20.0)),
-
-
-                ],
+    
+                    Icon(Icons.star, color: Colors.pink, size: 30.0), 
+                    Text('41', style: TextStyle(fontSize: 20.0)),
+    
+    
+                  ],
+                ),
               ),
-            );
+    );
   }
 
   Widget _crearAcciones(){
@@ -74,11 +90,13 @@ class BasicoPage extends StatelessWidget {
   }
 
   Widget _crearTexto(){
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
-      child: Text(
-        'Mollit dolor ex ex aliqua excepteur. Ut occaecat et laborum ex ea dolor tempor tempor. Consectetur culpa laboris proident magna in aute. Elit quis est aliquip aliquip do esse ea.',
-        textAlign: TextAlign.justify,
+    return SafeArea(
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+        child: Text(
+          'Mollit dolor ex ex aliqua excepteur. Ut occaecat et laborum ex ea dolor tempor tempor. Consectetur culpa laboris proident magna in aute. Elit quis est aliquip aliquip do esse ea.',
+          textAlign: TextAlign.justify,
+        ),
       ),
     );
   }
