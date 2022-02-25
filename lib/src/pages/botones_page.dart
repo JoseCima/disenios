@@ -47,7 +47,7 @@ class BotonesPage extends StatelessWidget {
      );
    }
 
-
+//Bottom navigation Bar
   Widget _fondoApp(){
     final gradiente = Container(
       width: double.infinity,
