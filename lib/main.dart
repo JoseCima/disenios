@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
 
 
     //Cambiando de colores la barra de arriba de los telefonos
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
-      //statusBarColor: Color.fromRGBO(52, 54, 101, 1.0),
-    ));
+    SystemChrome.setSystemUIOverlayStyle( SystemUiOverlayStyle.light.copyWith(
+      statusBarColor: Colors.transparent
+));
 
 
     return MaterialApp(
